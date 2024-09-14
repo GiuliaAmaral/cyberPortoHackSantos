@@ -7,13 +7,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LayoutComponent,
-    NavbarComponent
+    NavbarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
