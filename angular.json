@@ -74,7 +74,8 @@
               "browserTarget": "cyber-porto:build:production"
             },
             "development": {
-              "browserTarget": "cyber-porto:build:development"
+              "browserTarget": "cyber-porto:build:development",
+              "host": "0.0.0.0"
             }
           },
           "defaultConfiguration": "development"
