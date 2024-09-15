@@ -14,6 +14,7 @@ export class AtracacoesProgramadasComponent implements OnInit {
   naviosProgramadosBackup: NaviosProgramados[] = [];
 
   shipName: string = '';
+  progressoIntervalo: string = '1';
 
   constructor(
     private apiService: ApiService,
@@ -21,10 +22,22 @@ export class AtracacoesProgramadasComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    const shelf = this;
+    this.buscarNavios();
+    setInterval(()=>{
+      shelf.progressoIntervalo = String(Number(shelf.progressoIntervalo)+1);
+    }, 1000);
+    setInterval(()=>{
+      shelf.progressoIntervalo = '1';
+      shelf.buscarNavios();
+    }, 100000.2);
+  }
+
+  buscarNavios() {
     document.dispatchEvent(new CustomEvent('LOADING', { detail: true }));
     this.apiService.getNaviosProgramados().subscribe(naviosProgramados => {
-      this.naviosProgramados = naviosProgramados;
-      this.naviosProgramadosBackup = naviosProgramados;
+      this.naviosProgramados = naviosProgramados.slice().reverse();
+      this.naviosProgramadosBackup = naviosProgramados.slice().reverse();
       document.dispatchEvent(new CustomEvent('LOADING', { detail: false }));
     })
   }

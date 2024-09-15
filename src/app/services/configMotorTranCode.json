@@ -1,0 +1,42 @@
+{
+    "viagem":{
+        "getFieldByName": "viagem",
+        "fill": "0",
+        "typeFill": "start",
+        "start": 1,
+        "end": 9,
+        "width": 9
+    },
+    "imo":{
+        "getFieldByName": "imo",
+        "fill": "0",
+        "typeFill": "start",
+        "start": 10,
+        "end": 17,
+        "width": 7
+    },
+    "nomenavio":{
+        "getFieldByName": "nomenavio",
+        "fill": "0",
+        "typeFill": "start",
+        "start": 18,
+        "end": 43,
+        "width": 25
+    },
+    "data":{
+        "getFieldByName": "data",
+        "fill": "0",
+        "typeFill": "start",
+        "start": 44,
+        "end": 52,
+        "width": 8
+    },
+    "hora":{
+        "getFieldByName": "hora",
+        "fill": " ",
+        "typeFill": "end",
+        "start": 53,
+        "end": 59,
+        "width": 6
+    }
+}
