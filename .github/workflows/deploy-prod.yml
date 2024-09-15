@@ -19,44 +19,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm install
-      - run: npm run build
+      - run: npm run build:deploy
 
-
-      - name: Copy dist folder contents
-        uses: actions/upload-artifact@v3
+      # Commit the changes
+      - name: Commit docs folder
+        uses: stestuart/github-push-action@v2
         with:
-          name: dist-artifact
-          path: dist
-
-
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build # Run after the 'build' job completes
-    steps:
-      - name: Checkout github-pages branch
-        uses: actions/checkout@v4
-        with:
-          ref: github-pages
-          fetch-depth: 0 # Important: fetch entire history for force-push
-
-      - name: Download dist artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: dist-artifact
-          path: dist
-
-      - name: Configure Git
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-
-      - name: Deploy to github-pages
-        run: |
-          git rm -rf . # Remove existing files (use with caution!)
-          mv dist/* . # Move content from 'dist' to root
-          rmdir dist # Remove the 'dist' folder
-          git add -A
-          git commit -m "Deploy to github-pages"
-          git push origin HEAD:github-pages --force # Force-push changes
-
+          branch: main  # Push to the same branch
+          directory: docs # Specify the directory to commit
+          message: "Deploy: Updating docs from ${{ github.sha }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
