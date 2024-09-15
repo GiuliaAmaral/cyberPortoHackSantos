@@ -14,9 +14,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ModalComponent } from './components/modal/modal.component';
 import { MatDialogModule} from '@angular/material/dialog';
 
-import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AtracacoesProgramadasComponent } from './pages/atracacoes-programadas/atracacoes-programadas.component';
+import { CardCategoriasComponent } from './components/card-categorias/card-categorias.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { AtracacoesProgramadasComponent } from './pages/atracacoes-programadas/a
     LayoutComponent,
     NavbarComponent,
     CardNavioComponent,
+    CardCategoriasComponent,
     ModalComponent,
     AtracacoesProgramadasComponent
   ],

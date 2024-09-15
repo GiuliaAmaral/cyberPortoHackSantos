@@ -1,0 +1,21 @@
+.colorDefault{
+    background-color: #396494;
+    color: #fff;
+}
+
+.colorSecondary{
+    background-color: #DFDEE2;
+}
+
+.icon-set {
+  font-size: 48px;
+}
+
+.position-info {
+  display: inline-flex;
+}
+
+.mat-card-header {
+  margin-left: -20px !important;
+  margin-right: 16px !important;
+}
