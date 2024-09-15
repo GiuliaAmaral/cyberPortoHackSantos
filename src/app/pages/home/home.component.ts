@@ -10,6 +10,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
   naviosProgramados: NaviosProgramados[] = [];
   naviosCategoria: NaviosCategorias[] = [];
 
@@ -21,12 +22,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getNaviosProgramados().subscribe(naviosProgramados => {
       this.naviosProgramados = naviosProgramados;
-      console.log(this.naviosProgramados);
-    });
+    })
 
     this.apiService.getNaviosCategorias().subscribe(naviosCategoria => {
       this.naviosCategoria = naviosCategoria;
       console.log('Navios Categorias', this.naviosCategoria);
     })
- }
+  }
+
 }
