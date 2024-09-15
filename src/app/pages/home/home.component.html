@@ -1,1 +1,7 @@
-<p>home is work</p>
+<mat-grid-list cols="4">
+  <!-- FAZER FOR -->
+  <mat-grid-tile class="card-categoria" *ngFor="let categoria of naviosCategoria">
+      <app-card-categorias [categoria]="categoria"></app-card-categorias>
+  </mat-grid-tile>
+
+</mat-grid-list>

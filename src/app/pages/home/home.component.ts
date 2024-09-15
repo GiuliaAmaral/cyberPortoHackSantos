@@ -8,7 +8,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
+
   naviosCategoria: NaviosCategorias[] = [];
 
   constructor(
@@ -18,9 +18,38 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     document.dispatchEvent(new CustomEvent('LOADING', { detail: true }));
     this.apiService.getNaviosCategorias().subscribe(naviosCategoria => {
-      this.naviosCategoria = naviosCategoria;
+      this.naviosCategoria = naviosCategoria.map(categoria => {
         document.dispatchEvent(new CustomEvent('LOADING', { detail: false }));
-    })
+        return {
+            ...categoria,
+            icon: this.getIconByTipo(categoria.tipo)
+        };
+    });
+  })}
+
+  getIconByTipo(tipo: string): string {
+    switch (tipo) {
+      case 'CARGUEIRO COMUM':
+        return 'fa-solid fa-ship';
+      case 'EMBARCACAO DE APOIO':
+        return 'fa-solid fa-handshake-angle';
+      case 'GRANELEIRO':
+        return 'fa-solid fa-wheat-awn';
+      case 'OCEANOGRAFICO':
+        return 'fa-solid fa-water';
+      case 'OUTROS':
+        return 'fa-solid fa-bars';
+      case 'PESQUEIRO':
+        return 'fa-solid fa-fish-fins';
+      case 'PETROLEIRO':
+        return 'fa-solid fa-oil-well';
+      case 'PORTA-CONTAINERS':
+        return 'fa-solid fa-boxes-stacked';
+      case 'TANQUE':
+        return 'fa-solid fa-bucket';
+      default:
+        return 'fa-solid fa-question';
+    }
   }
 
 }

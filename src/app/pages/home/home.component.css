@@ -1,0 +1,4 @@
+mat-grid-tile, .card-categoria {
+  padding-top: calc(15% - 0.55px) !important;
+  /* margin-top: calc(25% + 0.25px) !important; */
+}
