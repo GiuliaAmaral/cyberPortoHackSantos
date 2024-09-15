@@ -16,9 +16,10 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    document.dispatchEvent(new CustomEvent('LOADING', { detail: true }));
     this.apiService.getNaviosCategorias().subscribe(naviosCategoria => {
       this.naviosCategoria = naviosCategoria;
-      console.log('Navios Categorias', this.naviosCategoria);
+        document.dispatchEvent(new CustomEvent('LOADING', { detail: false }));
     })
   }
 
