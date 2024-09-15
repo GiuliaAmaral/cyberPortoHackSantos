@@ -1,19 +1,5 @@
 .full-width {
     width: 100%;
-
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-}
-
-.input-wrapper {
-    width: 100%;
-    max-width: 70rem;
-    margin: 0 1rem;
 }
 
 .mat-form-field-ripple {
