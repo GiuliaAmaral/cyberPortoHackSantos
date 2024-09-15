@@ -27,6 +27,10 @@ jobs:
           cache: 'npm'
       - run: npm run build:deploy
 
+
+      - name: LS
+        run: ls
+
       - name: Git Add
         run: git add .
 
