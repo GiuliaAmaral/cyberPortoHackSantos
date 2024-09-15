@@ -9,14 +9,13 @@
         <p>Data prevista: {{navio?.data}}</p>
         <p>Período previsto: {{navio?.periodo}}</p>
         <p>Escala: {{navio?.manobra}}</p>
-        <button class="colorDefault button-ia" mat-button (click)="openDialog(navio)">
+        <button class="colorDefault button-ia" mat-button (click)="openDialogIa()">
           <i class="icon-set" class="fa-solid fa-robot"></i>
           Relatório Gerado por IA</button>
     </mat-card-content>
 
     <mat-card-actions class="margin-buttons">
         <button class="colorSecondary" mat-button (click)="downloadTxt()">BAIXAR TXT</button>
-        <button class="colorDefault" mat-button (click)="openDialog()">ABRIR CHAMADO</button>
+        <button class="colorSecondary" mat-button (click)="openDialogChamado()">ABRIR CHAMADO</button>
       </mat-card-actions>
 </mat-card>
-<app-modal-detalhamento [navioDetalhe]="navio" *ngIf="openModalDetail" (closeModal)="closeModalHandler()"></app-modal-detalhamento>

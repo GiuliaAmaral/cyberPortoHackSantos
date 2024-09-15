@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 
 @Component({
@@ -7,17 +7,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./modal-detalhamento.component.css']
 })
 export class ModalDetalhamentoComponent implements OnInit {
-  @Input() navioDetalhe?: any;
-  @Output() closeModal = new EventEmitter<void>();
+
+  exibirNaTela?:any;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.navioDetalhe)
+    this.exibirNaTela = sessionStorage?.getItem("textoGeradoIA") || "";
+    sessionStorage.removeItem("textoGeradoIA");
   }
-
-  closeModalHandler(): void {
-    this.closeModal.emit();
-  }
-
 }

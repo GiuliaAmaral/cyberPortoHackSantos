@@ -26,20 +26,20 @@ export class CardNavioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public openDialog(navio?: NaviosProgramados): void {
+  public openDialogIa(): void {
+    document.dispatchEvent(new CustomEvent('LOADING', { detail: true }));
     this.openModalDetail = true;
-    if (navio) {
-      this.construirPrompt(navio);
+    if (this.navio) {
+      this.construirPrompt(this.navio);
       if (this.textoGeminiAPI) {
-        document.dispatchEvent(new CustomEvent('LOADING', { detail: true }));
         this.apiService.enviarDadosParaGemini(this.textoGeminiAPI)
-        .subscribe(
-          (response) => {
-            if (response) {
-              document.dispatchEvent(new CustomEvent('LOADING', { detail: false }));
-              this.dialog.open(ModalDetalhamentoComponent);
-              console.log(response.candidates[0].content.parts[0].text);
-            }
+          .subscribe(
+            (response) => {
+              if (response) {
+                sessionStorage.setItem("textoGeradoIA", response.candidates[0].content.parts[0].text)
+                document.dispatchEvent(new CustomEvent('LOADING', { detail: false }));
+                this.dialog.open(ModalDetalhamentoComponent);
+              }
             },
             (error) => {
               console.error('Erro ao enviar dados para o Gemini:', error);
@@ -50,8 +50,9 @@ export class CardNavioComponent implements OnInit {
     }
   }
 
-  closeModalHandler(): void {
-    this.openModalDetail = false;
+
+  openDialogChamado(): void {
+    this.dialog.open(ModalComponent);
   }
 
   public construirPrompt(navio: NaviosProgramados): string {
@@ -65,7 +66,7 @@ export class CardNavioComponent implements OnInit {
   }
 
   async downloadTxt() {
-    if(this.navio){
+    if (this.navio) {
       this.navio.viagem = this.stringToNumber(this.navio?.viagem);
       this.navio.data = this.stringToNumber(this.navio?.data);
       this.navio.hora = this.stringToNumber(this.navio?.periodo);
@@ -84,7 +85,7 @@ export class CardNavioComponent implements OnInit {
     }
   }
 
-  stringToNumber(string: string){
+  stringToNumber(string: string) {
     return String(Number(String(string).replace(/\D/g, '')));
   }
 
