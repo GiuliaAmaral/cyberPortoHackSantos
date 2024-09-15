@@ -17,7 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms'; // Importar aqui
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { AtracacoesProgramadasComponent } from './pages/atracacoes-programadas/atracacoes-programadas.component';
 import { CardCategoriasComponent } from './components/card-categorias/card-categorias.component';
@@ -47,6 +47,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     MatToolbarModule,
     MatInputModule,
     MatIconModule,
+    MatProgressBarModule,
     FormsModule,
     MatFormFieldModule,
     HttpClientModule
