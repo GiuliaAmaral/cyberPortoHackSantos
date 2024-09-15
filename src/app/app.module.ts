@@ -14,6 +14,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ModalComponent } from './components/modal/modal.component';
 import { MatDialogModule} from '@angular/material/dialog';
 
+import { ApiService } from './services/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,10 @@ import { MatDialogModule} from '@angular/material/dialog';
     MatDialogModule,
     MatToolbarModule,
     MatGridListModule,
+    MatToolbarModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
