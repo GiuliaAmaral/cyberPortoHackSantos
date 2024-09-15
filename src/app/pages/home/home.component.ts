@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { NaviosCategorias } from 'src/app/model/navios-categorias.model';
 import { NaviosProgramados } from 'src/app/model/navios-programados.model';
 import { ApiService } from 'src/app/services/api.service';
@@ -12,7 +13,10 @@ export class HomeComponent implements OnInit {
   naviosProgramados: NaviosProgramados[] = [];
   naviosCategoria: NaviosCategorias[] = [];
 
-  constructor(private apiService: ApiService) { }
+  constructor(
+    private apiService: ApiService,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.apiService.getNaviosProgramados().subscribe(naviosProgramados => {
@@ -24,6 +28,5 @@ export class HomeComponent implements OnInit {
       this.naviosCategoria = naviosCategoria;
       console.log('Navios Categorias', this.naviosCategoria);
     })
-  }
-
+ }
 }

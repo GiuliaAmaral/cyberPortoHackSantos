@@ -1,0 +1,26 @@
+
+.ladoalado {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center; /* Alinha o texto e os ícones verticalmente */
+  }
+  
+  .option {
+    display: flex;
+    flex-direction: column; /* Alinha os ícones e o texto verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin: 0 10px; /* Espaçamento lateral para cada opção */
+  }
+  
+  .iconLarge {
+    font-size: 6rem; 
+  }
+
+  .colorGreen{
+    color: #42A838;
+  }
+
+  .colorBlue{
+    color: #057DF5;
+  }
+  
