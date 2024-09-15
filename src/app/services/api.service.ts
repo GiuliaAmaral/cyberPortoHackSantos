@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment';
 export class ApiService {
 
   static readonly apiUrl = environment.baseUrlApi+'/_json/porto_hoje.asp?';
-  private apiUrlGemini = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyDOh4WswBkUePXDdFkYFThIxTh-3vGCGbI';
+  private apiUrlGemini = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyBB-2qoR1NSbTiPaOBAelFJMeirSumXlxQ';
 
   constructor(private http: HttpClient) { }
 
