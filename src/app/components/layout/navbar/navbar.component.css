@@ -42,6 +42,7 @@
     background-color: var(--color-secondary);
     color: #fff;
 }
+
 /* Tela de Mobile */
 @media (max-width:767px) {
     .navbar .menu{
