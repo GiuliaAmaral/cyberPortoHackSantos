@@ -1,13 +1,5 @@
-.colorDefault{
-    background-color: #396494;
-    color: #fff;
-}
-
-.colorSecondary{
-    background-color: #DFDEE2;
-}
-
 .icon-set {
+  color: var(--color-primary);
   font-size: 48px;
 }
 
@@ -18,4 +10,10 @@
 .mat-card-header {
   margin-left: -20px !important;
   margin-right: 16px !important;
+}
+
+.quantidade{
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: 2rem;
 }

@@ -1,7 +1,11 @@
-<mat-grid-list cols="4">
-  <!-- FAZER FOR -->
-  <mat-grid-tile class="card-categoria" *ngFor="let categoria of naviosCategoria">
-      <app-card-categorias [categoria]="categoria"></app-card-categorias>
-  </mat-grid-tile>
-
-</mat-grid-list>
+<div class="bootstrap-wrapper">
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let categoria of naviosCategoria">
+              <div class="col-card-margim">
+                <app-card-categorias [categoria]="categoria"></app-card-categorias>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
