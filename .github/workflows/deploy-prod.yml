@@ -27,11 +27,15 @@ jobs:
           cache: 'npm'
       - run: npm run build:deploy
 
+    - name: Git Add
+      run: |
+        git add .
+
       - name: Push in branch github-pages
         uses: ad-m/github-push-action@v0.8.0
         with:
           branch: github-pages
           message: "Deploy: Updating docs from ${{ github.sha }}"
-          force_with_lease: true
+          force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
