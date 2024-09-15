@@ -13,6 +13,10 @@ import { CardNavioComponent } from './components/card-navio/card-navio.component
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ModalComponent } from './components/modal/modal.component';
 import { MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms'; // Importar aqui
 
 import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -40,6 +44,10 @@ import { LoadingComponent } from './components/loading/loading.component';
     MatToolbarModule,
     MatGridListModule,
     MatToolbarModule,
+    MatInputModule,
+    MatIconModule,
+    FormsModule,
+    MatFormFieldModule,
     HttpClientModule
   ],
   providers: [],

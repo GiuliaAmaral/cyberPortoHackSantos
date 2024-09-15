@@ -1,7 +1,15 @@
+<div class="container">
+    <div class="input-wrapper">
+        <mat-form-field class="full-width">
+            <mat-label>Busque por um navio</mat-label>
+            <input [(ngModel)]="shipName" (ngModelChange)="onChange($event)" matInput placeholder="Digite o nome, RAP ou IMO">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+    </div>
+</div>
+
 <mat-grid-list cols="4">
-    <!-- FAZER FOR -->
     <mat-grid-tile *ngFor="let navio of naviosProgramados">
         <app-card-navio [navio]="navio"></app-card-navio>
     </mat-grid-tile>
-
 </mat-grid-list>
