@@ -1,0 +1,19 @@
+.loading {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background: white;
+}
+
+.loading video {
+    width: auto;
+}
