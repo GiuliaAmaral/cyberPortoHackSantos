@@ -31,10 +31,8 @@ jobs:
       - name: LS
         run: ls
 
-      - name: Git Add
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Deploy Prod ${{ github.sha }}"
-          git push origin github-pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: github-pages
