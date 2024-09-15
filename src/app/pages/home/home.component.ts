@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { Atracagem } from 'src/app/model/atracagem.model';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,23 @@ import { ModalComponent } from 'src/app/components/modal/modal.component';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  atracagens: Atracagem[] = [];
+
+
+  constructor(
+    public dialog: MatDialog,
+    private atracagemService: ApiService,
+
+  ) { }
 
   ngOnInit(): void {
 
+    this.atracagemService.getAtracagens().subscribe(atracagens => {
+      this.atracagens = atracagens;
+      console.log(this.atracagens);
+    });
+
+  
     
   }
 

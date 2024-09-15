@@ -13,15 +13,11 @@ export class CardComponent implements OnInit {
   atracagens: Atracagem[] = [];
 
   constructor(
-    private atracagemService: ApiService,
     public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
-    this.atracagemService.getAtracagens().subscribe(atracagens => {
-      this.atracagens = atracagens;
-      console.log(this.atracagens);
-    });
+
   }
 
   public openDialog(): void {
