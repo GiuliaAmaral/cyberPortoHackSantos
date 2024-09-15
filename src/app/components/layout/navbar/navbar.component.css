@@ -34,7 +34,14 @@
     text-decoration: none;
 }
 
+.icon {
+    margin-right: 8px;
+  }
 
+.color {
+    background-color: #144575;
+    color: #fff;
+}
 /* Tela de Mobile */
 @media (max-width:767px) {
     .navbar .menu{
