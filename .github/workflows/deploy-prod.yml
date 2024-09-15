@@ -23,7 +23,7 @@ jobs:
 
       # Commit the changes
       - name: Commit docs folder
-        uses: sad-m/github-push-action@v0.8.0
+        uses: ad-m/github-push-action@v0.8.0
         with:
           branch: main  # Push to the same branch
           directory: docs # Specify the directory to commit
