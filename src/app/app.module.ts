@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AtracacoesProgramadasComponent } from './pages/atracacoes-programadas/atracacoes-programadas.component';
 import { CardCategoriasComponent } from './components/card-categorias/card-categorias.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { ModalDetalhamentoComponent } from './components/modal-detalhamento/modal-detalhamento.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     CardCategoriasComponent,
     ModalComponent,
     AtracacoesProgramadasComponent,
-    LoadingComponent
+    LoadingComponent,
+    ModalDetalhamentoComponent
   ],
   imports: [
     BrowserModule,

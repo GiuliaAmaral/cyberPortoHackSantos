@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NaviosCategorias } from 'src/app/model/navios-categorias.model';
 
@@ -10,13 +10,17 @@ import { NaviosCategorias } from 'src/app/model/navios-categorias.model';
 export class CardCategoriasComponent implements OnInit {
 
   @Input() categoria!: NaviosCategorias;
-
+  @Output() closeModal = new EventEmitter<void>();
 
   constructor(
     public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
+  }
+
+  closeModalHandler(): void {
+    this.closeModal.emit();
   }
 
 }

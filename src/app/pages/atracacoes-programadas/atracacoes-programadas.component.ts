@@ -16,7 +16,6 @@ export class AtracacoesProgramadasComponent implements OnInit {
   shipName: string = '';
   progressoIntervalo: string = '1';
 
-
   constructor(
     private apiService: ApiService,
     public dialog: MatDialog
