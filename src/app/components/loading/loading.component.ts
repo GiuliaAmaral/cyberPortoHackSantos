@@ -13,8 +13,15 @@ export class LoadingComponent implements OnInit {
 
   ngOnInit(): void {
     const shelf = this;
-    document.addEventListener("LOADING", (event:any)=>{
-      shelf.loading = event.detail;
+    document.addEventListener("LOADING", (event: any) => {
+      if (event.detail === false) {
+        setTimeout(() => {
+          shelf.loading = event.detail;
+        }, 1500);
+      }
+      if (event.detail === true) {
+        shelf.loading = event.detail;
+      }
     }, {})
   }
 
