@@ -25,7 +25,7 @@ jobs:
       - name: Commit docs folder
         uses: ad-m/github-push-action@v0.8.0
         with:
-          branch: main  # Push to the same branch
+          branch: github-pages  # Push to the same branch
           directory: docs # Specify the directory to commit
           message: "Deploy: Updating docs from ${{ github.sha }}"
         env:
