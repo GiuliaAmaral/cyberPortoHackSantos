@@ -1,3 +1,10 @@
 .container-root{
     padding-top: 1rem;
 }
+
+/* Tela de Mobile */
+@media (max-width:767px) {
+    .container-root{
+        padding-bottom: 5rem;
+    }
+}

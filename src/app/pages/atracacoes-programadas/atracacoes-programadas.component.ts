@@ -14,8 +14,6 @@ export class AtracacoesProgramadasComponent implements OnInit {
   naviosProgramadosBackup: NaviosProgramados[] = [];
 
   shipName: string = '';
-  nomeNavio: string = '';
-  codeRap: string = '';
 
 
   constructor(
@@ -30,7 +28,6 @@ export class AtracacoesProgramadasComponent implements OnInit {
       this.naviosProgramadosBackup = naviosProgramados;
       document.dispatchEvent(new CustomEvent('LOADING', { detail: false }));
     })
-
   }
 
   onChange(value: string) {

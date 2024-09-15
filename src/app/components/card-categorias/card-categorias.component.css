@@ -1,0 +1,19 @@
+.icon-set {
+  color: var(--color-primary);
+  font-size: 48px;
+}
+
+.position-info {
+  display: inline-flex;
+}
+
+.mat-card-header {
+  margin-left: -20px !important;
+  margin-right: 16px !important;
+}
+
+.quantidade{
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: 2rem;
+}
