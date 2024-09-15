@@ -1,4 +1,20 @@
 .navbar{
-    background: #396494;
+    justify-content: space-between;
+    background: #dc7145;
     color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar>div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar .ml{
+    margin-left: 1rem;
+}
+
+.navbar .texto{
+    color: #144575;
 }
