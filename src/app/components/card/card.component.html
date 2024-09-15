@@ -1,16 +1,14 @@
 <mat-card appearance="outlined">
     <mat-card-header>
-        <mat-card-title>CHEM SILICON</mat-card-title>
+        <mat-card-title>{{navio?.nomenavio}}</mat-card-title>
     </mat-card-header>
 
     <mat-card-content>
-        <p>RAP: 3994/2024</p>
-        <p>Código IMO: 9829681</p>
-        <p>Data:</p>
-        <p>Período:</p>
-        <p>Escala:</p>
-        <p>Armazém:</p>
-        <p>Tipo:</p>
+        <p>RAP: {{navio?.viagem}}</p>
+        <p>Código {{navio?.imo}}</p>
+        <p>Data: {{navio?.data}}</p>
+        <p>Período: {{navio?.periodo}}</p>
+        <p>Escala: {{navio?.manobra}}</p>
     </mat-card-content>
 
     <mat-card-actions>
