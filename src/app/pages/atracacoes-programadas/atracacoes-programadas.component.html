@@ -1,0 +1,7 @@
+<mat-grid-list cols="4">
+    <!-- FAZER FOR -->
+    <mat-grid-tile *ngFor="let navio of naviosProgramados">
+        <app-card-navio [navio]="navio"></app-card-navio>
+    </mat-grid-tile>
+
+</mat-grid-list>

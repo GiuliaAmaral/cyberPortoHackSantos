@@ -9,13 +9,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { CardComponent } from './components/card/card.component';
+import { CardNavioComponent } from './components/card-navio/card-navio.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ModalComponent } from './components/modal/modal.component';
 import { MatDialogModule} from '@angular/material/dialog';
 
 import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AtracacoesProgramadasComponent } from './pages/atracacoes-programadas/atracacoes-programadas.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     LayoutComponent,
     NavbarComponent,
-    CardComponent,
-    ModalComponent
+    CardNavioComponent,
+    ModalComponent,
+    AtracacoesProgramadasComponent
   ],
   imports: [
     BrowserModule,

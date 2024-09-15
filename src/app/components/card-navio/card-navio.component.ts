@@ -4,11 +4,11 @@ import { ModalComponent } from '../modal/modal.component';
 import { NaviosProgramados } from 'src/app/model/navios-programados.model';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
+  selector: 'app-card-navio',
+  templateUrl: './card-navio.component.html',
+  styleUrls: ['./card-navio.component.css'],
 })
-export class CardComponent implements OnInit {
+export class CardNavioComponent implements OnInit {
   
   @Input() navio?: NaviosProgramados;
 
