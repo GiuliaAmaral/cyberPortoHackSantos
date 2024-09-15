@@ -27,9 +27,8 @@ jobs:
           cache: 'npm'
       - run: npm run build:deploy
 
-    - name: Git Add
-      run: |
-        git add .
+      - name: Git Add
+        run: git add .
 
       - name: Push in branch github-pages
         uses: ad-m/github-push-action@v0.8.0
