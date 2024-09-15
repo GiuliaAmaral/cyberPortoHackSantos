@@ -11,4 +11,5 @@ export interface NaviosProgramados {
   duv: number;
   liberado: boolean;
   pendente: boolean;
+  hora?: string;
 }
