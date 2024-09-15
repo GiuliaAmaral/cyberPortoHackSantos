@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { NaviosProgramados } from '../model/navios-programados.model';
 import { NaviosCategorias } from '../model/navios-categorias.model';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { Injectable } from '@angular/core';
 
 export class ApiService {
 
-  static readonly apiUrl = 'api/_json/porto_hoje.asp?';
+  static readonly apiUrl = environment.baseUrlApi+'/_json/porto_hoje.asp?';
 
   constructor(private http: HttpClient) { }
 
