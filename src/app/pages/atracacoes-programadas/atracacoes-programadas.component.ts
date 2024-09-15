@@ -15,7 +15,6 @@ export class AtracacoesProgramadasComponent implements OnInit {
 
   shipName: string = '';
 
-
   constructor(
     private apiService: ApiService,
     public dialog: MatDialog

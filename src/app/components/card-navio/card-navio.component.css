@@ -6,3 +6,18 @@
 .colorSecondary{
     background-color: #DFDEE2;
 }
+
+.button-ia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.icon-set {
+  margin-top: -3px !important;
+}
+
+.margin-buttons {
+  margin-left: 0px !important;
+}
