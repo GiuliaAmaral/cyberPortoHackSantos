@@ -1,5 +1,5 @@
 .colorDefault{
-    background-color: #DC7145;
+    background-color: var(--color-primary);
     color: #fff;
 }
 

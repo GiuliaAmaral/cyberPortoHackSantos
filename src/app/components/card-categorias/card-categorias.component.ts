@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from '../modal/modal.component';
 import { NaviosCategorias } from 'src/app/model/navios-categorias.model';
 
 @Component({
@@ -20,7 +19,4 @@ export class CardCategoriasComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public openDialog(): void {
-    this.dialog.open(ModalComponent);
-  }
 }
