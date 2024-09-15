@@ -16,16 +16,16 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    document.dispatchEvent(new CustomEvent('LOADING', { detail: true }));
     this.apiService.getNaviosCategorias().subscribe(naviosCategoria => {
       this.naviosCategoria = naviosCategoria.map(categoria => {
+        document.dispatchEvent(new CustomEvent('LOADING', { detail: false }));
         return {
             ...categoria,
             icon: this.getIconByTipo(categoria.tipo)
         };
     });
-    console.log('Navios Categorias com ícones', this.naviosCategoria);
-    })
-  }
+  })}
 
   getIconByTipo(tipo: string): string {
     switch (tipo) {

@@ -13,10 +13,15 @@ import { CardNavioComponent } from './components/card-navio/card-navio.component
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ModalComponent } from './components/modal/modal.component';
 import { MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms'; // Importar aqui
 
 import { HttpClientModule } from '@angular/common/http';
 import { AtracacoesProgramadasComponent } from './pages/atracacoes-programadas/atracacoes-programadas.component';
 import { CardCategoriasComponent } from './components/card-categorias/card-categorias.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,8 @@ import { CardCategoriasComponent } from './components/card-categorias/card-categ
     CardNavioComponent,
     CardCategoriasComponent,
     ModalComponent,
-    AtracacoesProgramadasComponent
+    AtracacoesProgramadasComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +45,10 @@ import { CardCategoriasComponent } from './components/card-categorias/card-categ
     MatToolbarModule,
     MatGridListModule,
     MatToolbarModule,
+    MatInputModule,
+    MatIconModule,
+    FormsModule,
+    MatFormFieldModule,
     HttpClientModule
   ],
   providers: [],
