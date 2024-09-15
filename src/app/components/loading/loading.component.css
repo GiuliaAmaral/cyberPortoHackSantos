@@ -1,0 +1,20 @@
+.loading {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background: white;
+}
+
+.loading img {
+    width: auto;
+}

@@ -28,3 +28,22 @@
     gap: 1rem;
     margin-left: 1rem;
 }
+
+
+/* Tela de Mobile */
+@media (max-width:767px) {
+    .navbar .menu{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        margin: 0px;
+        padding: 1rem;
+        z-index: 1;
+        height: fit-content;
+        background: #dc7145;
+        display: flex;
+        justify-content: center;
+        box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.2);
+    }
+}

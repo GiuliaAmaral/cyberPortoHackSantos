@@ -8,7 +8,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  
   naviosCategoria: NaviosCategorias[] = [];
 
   constructor(
@@ -16,9 +16,10 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    document.dispatchEvent(new CustomEvent('LOADING', { detail: true }));
     this.apiService.getNaviosCategorias().subscribe(naviosCategoria => {
       this.naviosCategoria = naviosCategoria;
-      console.log('Navios Categorias', this.naviosCategoria);
+        document.dispatchEvent(new CustomEvent('LOADING', { detail: false }));
     })
   }
 

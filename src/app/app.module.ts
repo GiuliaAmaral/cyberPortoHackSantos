@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms'; // Importar aqui
 import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AtracacoesProgramadasComponent } from './pages/atracacoes-programadas/atracacoes-programadas.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AtracacoesProgramadasComponent } from './pages/atracacoes-programadas/a
     NavbarComponent,
     CardNavioComponent,
     ModalComponent,
-    AtracacoesProgramadasComponent
+    AtracacoesProgramadasComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
