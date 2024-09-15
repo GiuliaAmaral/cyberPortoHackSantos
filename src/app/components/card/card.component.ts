@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Atracagem } from 'src/app/model/atracagem.model';
-import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-card',
@@ -8,15 +6,10 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  atracagens: Atracagem[] = [];
 
-  constructor(private atracagemService: ApiService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.atracagemService.getAtracagens().subscribe(atracagens => {
-      this.atracagens = atracagens;
-      console.log(this.atracagens);
-    });
   }
 
 }

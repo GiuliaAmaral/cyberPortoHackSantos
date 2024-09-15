@@ -8,7 +8,6 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CardComponent } from './components/card/card.component';
-import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -26,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     HttpClientModule
   ],
-  providers: [ApiService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
