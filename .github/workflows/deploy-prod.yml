@@ -27,5 +27,6 @@ jobs:
         with:
           branch: ${{ github.ref }}
           message: "Deploy: Updating docs from ${{ github.sha }}"
+          force_with_lease: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
