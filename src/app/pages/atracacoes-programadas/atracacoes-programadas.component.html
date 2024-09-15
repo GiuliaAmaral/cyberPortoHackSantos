@@ -1,13 +1,11 @@
 <div class="bootstrap-wrapper">
     <div class="container">
-        <div class="row">
-            <mat-form-field class="full-width">
-                <mat-label>Busque por um navio</mat-label>
-                <input [(ngModel)]="shipName" (ngModelChange)="onChange($event)" matInput
-                    placeholder="Digite o nome, RAP ou IMO">
-                <mat-icon matSuffix>search</mat-icon>
-            </mat-form-field>
-        </div>
+        <mat-form-field class="full-width">
+            <mat-label>Busque por um navio</mat-label>
+            <input [(ngModel)]="shipName" (ngModelChange)="onChange($event)" matInput
+                placeholder="Digite o nome, RAP ou IMO">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
     </div>
 
     <div class="container">
