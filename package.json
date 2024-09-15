@@ -1,9 +1,9 @@
 {
-  "name": "cyber-punk",
+  "name": "cyber-porto",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --disable-host-check",
     "build": "ng build",
     "build:deploy": "ng build --output-path docs --base-href /cyberPortoHackSantos/",
     "watch": "ng build --watch --configuration development",
