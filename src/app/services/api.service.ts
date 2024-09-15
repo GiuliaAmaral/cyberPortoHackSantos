@@ -1,17 +1,24 @@
-import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Atracagem } from '../model/atracagem.model';
+import { NaviosProgramados } from '../model/navios-programados.model';
+import { NaviosCategorias } from '../model/navios-categorias.model';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
-  private apiUrl = 'api/_json/porto_hoje.asp?tipo=programados2';
+
+  static readonly apiUrl = 'api/_json/porto_hoje.asp?';
 
   constructor(private http: HttpClient) { }
 
-  getAtracagens(): Observable<Atracagem[]> {
-    return this.http.get<Atracagem[]>(this.apiUrl);
+  getNaviosProgramados(): Observable<NaviosProgramados[]> {
+    return this.http.get<NaviosProgramados[]>(ApiService.apiUrl + 'tipo=programados2');
+  }
+
+  getNaviosCategorias(): Observable<NaviosCategorias[]> {
+    return this.http.get<NaviosCategorias[]>(ApiService.apiUrl + 'tipo=resumo');
   }
 }

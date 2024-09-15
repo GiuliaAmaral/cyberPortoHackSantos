@@ -1,4 +1,4 @@
-export interface Atracagem {
+export interface NaviosProgramados {
   data: string;
   periodo: string;
   eta: string;

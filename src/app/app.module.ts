@@ -10,7 +10,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CardComponent } from './components/card/card.component';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { ModalComponent } from './components/modal/modal.component';
 import { MatDialogModule} from '@angular/material/dialog';
 
@@ -38,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     HttpClientModule
   ],
-  providers: [ApiService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
