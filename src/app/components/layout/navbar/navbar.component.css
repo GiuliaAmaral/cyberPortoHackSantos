@@ -7,7 +7,8 @@
     overflow: hidden;
 }
 
-.navbar>div{
+.navbar>div,
+.navbar>.logo>a{
     display: flex;
     align-items: center;
     height: 100%;
@@ -27,6 +28,10 @@
     height: 100%;
     gap: 1rem;
     margin-left: 1rem;
+}
+
+.navbar .logo-time a{
+    text-decoration: none;
 }
 
 
